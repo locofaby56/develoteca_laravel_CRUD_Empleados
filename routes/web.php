@@ -21,7 +21,7 @@ Route::resource('empleados', EmpleadosController::class)->middleware('auth');
 
 // ['register' => false, 'reset' => false] esta sentencia nos ayuda a quitar los 
 // elementos que no necesitamos (por el momento)
-Auth::routes(['register' => false, 'reset' => false]);
+Auth::routes(['register' => true, 'reset' => false]);
 
 Route::get('/home', [EmpleadosController::class, 'index'])->name('home');
 
